@@ -128,11 +128,7 @@ every 5 seconds:
 
 ## Installation
 
-Coordinate:
-
-     [org.clojars.sbocq/cronit "1.0.2"]
-
-Follow the link below for instructions:
+Follow the link below for the instructions to add a dependency to your project:
 
 [![Clojars Project](https://img.shields.io/clojars/v/org.clojars.sbocq/cronit.svg)](https://clojars.org/org.clojars.sbocq/cronit)
 
