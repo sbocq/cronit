@@ -77,7 +77,7 @@ above and `:current` to access its current value.
 
 ``` clojure
 (-> (c/init {:hour [:* 12], :day-of-week [:+ :mon :wed]}
-        (ZonedDateTime/parse "2021-06-16T11:15:30+02:00[Europe/Brussels]"))
+            (ZonedDateTime/parse "2021-06-16T11:15:30+02:00[Europe/Brussels]"))
     :current str)
 ;; "2021-06-16T11:15:30+02:00[Europe/Brussels]"
 ```
