@@ -1,0 +1,21 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
+ :aliases
+ {:dev {:extra-deps {philoskim/debux {:mvn/version "0.7.9"}}}
+  :test {:extra-paths ["test"]}
+  :examples {:extra-paths ["examples"]}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "b6b3193fcc42659d7e46ecd1884a228993441182"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}
+  :build {:replace-paths ["."]
+          :replace-deps {io.github.clojure/tools.build
+                         {:git/url "https://github.com/clojure/tools.build"
+                          :git/tag "v0.1.2"
+                          :sha "88dc72a329ad44eec6c75e5bcfcbb3ffc64c9928"}}
+          :ns-default build}
+  :deploy {:replace-deps {slipset/deps-deploy {:mvn/version "0.1.5"}}
+           :exec-fn deps-deploy.deps-deploy/deploy
+           :exec-args {:installer :remote :artifact "target/cronit.jar"}}}}
